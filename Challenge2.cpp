@@ -5,11 +5,18 @@
 
 int gcd(int aNumber1, int aNumber2)
 {
+	int lResult = 0;
+	
 	if(aNumber2 == 0)
 	{
-		return aNumber1;
+		lResult = aNumber1;
 	}
-	return gcd(aNumber2, aNumber1%aNumber2);
+	else
+	{
+		lResult = gcd(aNumber2, aNumber1%aNumber2);
+	}
+	
+	return lResult;
 }
 
 int main()
